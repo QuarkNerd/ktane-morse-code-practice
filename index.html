@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KTANE - Morse Code</title>
+    <script src="./index.js"></script>
+  </head>
+  <style>
+    p {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    input {
+      width: 200px;
+    }
+  </style>
+  <body>
+    <div class="bomb">
+      <img id="bomb" src="./off.PNG" />
+    </div>
+    <button onclick="displayDot()">Display Dot</button>
+    <button onclick="displayDash()">Display Dash</button>
+    <hr />
+    <input placeholder="morse code to play" id="specifcMorse" type="text" />
+    <button onclick="displayChosenCode()">display</button>
+    <hr />
+    <input
+      placeholder="number of letters (default: 3)"
+      id="letterCount"
+      type="number"
+      inputmode="numeric"
+      pattern="[0-9]*"
+    />
+    <button onclick="displayRandomLetterSeries()">
+      Display Random Letter Series
+    </button>
+    <button onclick="revealLetterSeries()">Reveal Letters</button>
+    <button onclick="displayLetterSeries()">Repeat</button>
+    <p id="currentLetterSeries"></p>
+    <hr />
+  </body>
+</html>
